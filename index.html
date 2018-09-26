@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>New York Times Search</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class="container">
+        <div class="jumbotron" style="background-color: rgb(33, 56, 110) ; color: white;">
+                <h1 class="text-center">
+                  <strong>
+                    <i class="fa fa-newspaper-o"></i> New York Times Search</strong>
+                </h1>
+              </div>
+   
+    <div class="row">
+        <div class="col-sm-12">
+            <br>
+            <div class="card-header">
+                <strong>
+                <i class="fa fa-table"></i> Search Parameters</strong>
+            </div>
+            <br>
+            <div class="Card-body">
+            <form role="Form">
+            <div class="form-group">
+                <label for= "search">Search Term:</label> 
+                <input type="text" class="form-control" id="search-term">
+            </div>
+            <div class="form-group">
+            <label for="pwd">Number of Records to Retrieve:</label>
+            <select id="article-count" class="custom-select" aria-labelledby="dropdownMenuButton">
+                    <option selected value="1">1</option>
+                    <option value="5" selected>5</option>
+                    <option value="10">10</option>
+                  </select>
+            </div>
+            <div class="form-group">
+                    <label for= "start Year">Start Year (Optional)</label> 
+                    <input type="text" class="form-control" id="start-year">
+                </div>
+                <div class="form-group">
+                        <label for= "End year">End Year (Optional)</label> 
+                        <input type="text" class="form-control" id="end-year">
+                    </div>
+          <button type="submit" class="btn btn-default" id="run-search">
+                    <i class="fa fa-search"></i> Search</button>
+                    <button class="btn btn-default" id="clear-all">
+                    <i class="fa fa-trash"></i> Clear Results</button>
+            </form>
+            <div class="card-header">
+                    <strong>
+                      <i class="fa fa-table"></i> Top Articles</strong>
+                  </div>
+        
+            <div class="card-body" id="article-section">
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="assets/javascript/app.js"></script>
+</body>
+</html>
